@@ -1,0 +1,111 @@
+.section-unic
+    height: auto  
+    position: relative
+    padding: 200px 0 
+
+    .mramor
+        position: absolute
+        bottom: 130px
+        left: 75px
+    img.gold-fon
+        position: absolute
+        right: 75px
+        top: 130px
+
+    &-content
+        width: 100%
+        display: flex
+        justify-content: flex-end
+
+        .carts
+            width: 100%
+            position: relative
+
+            &-content
+                position: relative
+                background-color: #ffffff
+                height: auto
+                width: 100%
+                display: flex
+                flex-direction: column
+                box-shadow: 0 0 7px 1px rgba(0, 0, 1, 0.36)
+
+
+                .row1, .row2
+                    display: flex
+                    height: 100%
+                .row1
+                    margin-bottom: 0px
+                .row1, .row2
+                    height: 50%
+                    .cart3, .cart4
+                        padding-bottom: 80px !important
+                    .cart
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: flex-start
+                        padding-left: 70px
+                        padding-bottom: 80px
+                        width: 50%
+                        padding-top: 30px
+                        img.hover-fon
+                            position: absolute
+                            top: 0
+                            left: 0
+                            width: 100%
+                            height: auto
+                            display: none
+                        h1
+                            position: relative
+                            width: 450px
+                            color: #1f2024
+                            font-size: 30px
+                            +PT
+
+                        p.number
+                            position: relative
+                            color: #aa8d37
+                            font-size: 50px
+                            font-weight: 400
+                            +PT
+
+                        h3
+                            position: relative
+                            color: #aa8d37
+                            font-size: 24px
+                            font-weight: 400
+                            +PT
+
+                        hr
+                            position: relative
+                            width: 190px
+                            border: 2px solid #aa8d37
+                            margin: 16px 0
+
+                        p.cart-text
+                            position: relative
+                            color: #1d1f23
+                            font-size: 14px
+                            font-weight: 400
+                            +PT
+                            max-width: 450px
+
+                        &:hover
+                            p
+                                color: #ffffff
+                            h3
+                                color: #ffffff
+
+                        
+                    .cart2:hover
+                        background: url(../image/section-unic/card1.png) no-repeat center
+                        background-size: cover
+                    
+                    .cart3:hover
+                        background: url(../image/section-unic/card2.png) no-repeat center
+                        background-size: cover
+
+                    .cart4:hover
+                        background: url(../image/section-unic/card3.png) no-repeat center
+                        background-size: cover

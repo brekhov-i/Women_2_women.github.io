@@ -1,0 +1,252 @@
+.header
+    height: 900px
+    position: relative
+    padding-bottom: 182px
+    overflow: hidden
+
+    video
+        height: 100%
+        width: auto
+        position: absolute
+        top: 0
+        left: 0
+
+    .line
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+
+        img
+            width: 100%
+            transform: translateX(3.5px)
+    
+    .temno
+        background-color: rgba(29,31,35,0.65)
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+
+    .navbar-collapse
+        display: none
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: #1d1f23
+        top: 0
+        left: 0
+        z-index: 10000
+
+
+        .col1
+            background: url(../image/header/menu.png) no-repeat center
+            background-size: cover
+            height: 100%
+
+        .col2
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            position: relative
+            .navbar-nav
+                transform: translateY(-50px)
+                margin-left: 30px
+
+                li
+                    margin-bottom: 30px
+                    display: flex
+                    justify-content: flex-start
+
+                    hr
+                        border: 1px solid #ffffff
+                        width: 28px
+                        margin: 0
+                        margin-right: 20px
+                        transform: translateY(20px)
+                        transition: 0.5s all
+
+                    p.number
+                        color: #ffffff
+                        +PT
+                        font-size: 24px
+                        height: auto
+                        padding-top: 3px
+                        margin: 0
+                        margin-right: 20px
+
+                    a
+                        padding: 0
+                        padding-top: 3px
+                        color: #ffffff
+                        +PT
+                        font-size: 24px
+
+            .button-presoed
+                display: flex
+                margin-left: 30px
+                transform: translateY(-10px)
+
+                img
+                    width: 38px
+                    height: 38px
+                    transform: translateY(5px)
+
+                a
+                    width: 151px
+                    margin-left: 20px
+                    color: #aa8d37
+                    text-decoration: none
+                    +PT
+
+            button.nav_close
+                position: absolute
+                top: 30px
+                right: 50px
+                background-color: #1f2024
+                color: #ffffff
+                opacity: 1
+                width: 50px
+                height: 50px
+                transition: 0.8s all
+                transform: rotate(225deg)
+                font-size: 50px
+                display: flex
+                justify-content: center
+                align-items: center
+                font-weight: 300
+                border-width: 0
+
+                span
+                    transform: rotate(0deg)
+                    line-height: 30px
+                    margin-top: -8px
+
+                img
+                    transform: rotate(-45deg)
+ 
+    &-content
+        height: 100%
+        position: relative
+        .soc-nav
+            position: absolute
+            right: 0
+            top: 70%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+
+            .soc-link
+                margin: 15px 0
+                &:first-child
+                    margin-top: 0
+                &:last-child
+                    margin-bottom: 0
+        .navbar
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: 150px
+
+            &-phone
+                display: flex
+                justify-content: space-between
+                align-items: center
+                height: auto
+                width: auto
+
+                button.navbar-toggler
+                    height: 26px
+                    width: 26px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-width: 0
+                    outline: none  
+                    margin-left: 30px
+                    padding: 0
+
+                    img
+                        height: 100%
+                        width: 100%
+
+                    .icon-menu-hover
+                        display: none
+
+                    &:hover
+                        .icon-menu
+                            display: none
+                        .icon-menu-hover
+                            display: block
+                            
+
+                a
+                    text-decoration: none
+                    color: #ffffff
+                    +PT
+                    font-size: 18px
+                    padding-top: 2px
+
+
+        .header_mane
+            margin-top: 100px
+            height: 470px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: flex-start
+            position: relative
+
+            h1
+                color: #ffffff
+                font-size: 48px
+                text-transform: uppercase
+                font-family: 'PT Serif Caption', arial
+                margin-bottom: 30px
+                letter-spacing: 10px
+                font-weight: 400
+
+            h4
+                color: #ffffff
+                font-size: 24px
+                text-transform: uppercase
+                font-family: 'PT Serif Caption', arial
+                font-weight: 400
+                letter-spacing: 3px
+
+            button.btn-join
+                background: url(../image/btn.png) no-repeat
+                background-size: 100%
+                height: 43px
+                width: 281px
+                color: #ffffff
+                font-size: 16px
+                text-transform: uppercase
+                +PT
+                margin-top: 58px
+                margin-bottom: 60px
+                letter-spacing: 2px
+
+            .block-mouse
+                position: absolute
+                bottom: 2px
+                display: flex
+                flex-direction: column
+                align-items: center
+                z-index: 8
+
+                a
+                    transform: translateX(3px)
+                marquee
+                    transform: translateX(3px) rotate(180deg)
+                    height: 80px
+                    width: 1px
+                    background-color: rgba(0,0,0,0.5)
+                    div
+                        background-color: #ffffff
+                        width: 1px
+                        height: 20px
