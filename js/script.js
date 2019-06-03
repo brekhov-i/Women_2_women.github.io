@@ -7,26 +7,33 @@ $(document).ready(function() {
     $('.slick-slider').slick({
         prevArrow: $('.carousel-control-prev'),
         nextArrow: $('.carousel-control-next'),
+        centerMode: true,
+        centerPadding: '80px',
+        autoplay: true,
+        autoplaySpeed: 2000,
     });
 
-
-    $('.navbar-toggler').click(function() {
-        $('.nav_close').removeAttr('style');
-        $('body').css({'overflow': 'hidden'})
-        $('.navbar-collapse').slideToggle(600, 'linear', function () {
-            $(this).css({'display':'flex'})
-        });
+    $('.navbar-toggler').find('input').click(function () {
+        if($('body').css('overflow') === 'hidden')
+        {
+            $('body').css({'overflow':'visible'});
+        }
+        else
+        {
+            $('body').css({ 'overflow': 'hidden' });
+        }
+        $('.navbar-collapse').slideToggle(600, 'linear', function() {
+            if($(this).css('display') === 'block')
+            {
+                $(this).css({'display':'flex'})
+            }
+        })
     })
-
-
-    $('.nav_close').click(function () {
-        $(this).css({'transform': 'rotate(-225deg)'});
-        $('body').removeAttr('style');
-        setTimeout(function () { 
-            $('.navbar-collapse').slideToggle(600, 'linear', function () {
-                $(this).removeAttr('style');
-            });
-        }, 50);
+    .mouseenter(function () {
+        $('.navbar-toggler').find('span').css({ 'background': '#aa8d37' })
+    })
+    .mouseleave(function () {
+        $('.navbar-toggler').find('span').css({ 'background': '#ffffff' })
     })
 
     $('.btn-join').click(function () {
@@ -54,4 +61,29 @@ $(document).ready(function() {
         $(this).find('.line-nav-link').removeAttr('style');
         $('.nav-link, .number').removeAttr('style');
     })
+
+
+    $('.lazy').Lazy({
+        // your configuration goes here
+        scrollDirection: 'vertical',
+        threshold: 1000,
+        effect: 'fadeIn',
+        visibleOnly: false,
+        onError: function (element) {
+            console.log('error loading ' + element.data('src'));
+        },
+        youtubeLoader: function (element) {
+            var url = 'https://www.youtube.com/embed/LpjpF51Q9B4',
+                frame = $('<iframe />')
+
+            frame.attr('src', url)
+            frame.attr('width', '100%')
+            frame.attr('height', 450)
+            frame.attr('frameborder', 0)
+            frame.attr('allow', "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
+            frame.attr('allowfullscreen', 'allowfullscreen');
+            element.append(frame).load();
+        },
+    });
+    
 })

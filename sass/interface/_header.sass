@@ -101,32 +101,6 @@
                     color: #aa8d37
                     text-decoration: none
                     +PT
-
-            button.nav_close
-                position: absolute
-                top: 30px
-                right: 50px
-                background-color: #1f2024
-                color: #ffffff
-                opacity: 1
-                width: 50px
-                height: 50px
-                transition: 0.8s all
-                transform: rotate(225deg)
-                font-size: 50px
-                display: flex
-                justify-content: center
-                align-items: center
-                font-weight: 300
-                border-width: 0
-
-                span
-                    transform: rotate(0deg)
-                    line-height: 30px
-                    margin-top: -8px
-
-                img
-                    transform: rotate(-45deg)
  
     &-content
         height: 100%
@@ -159,30 +133,53 @@
                 height: auto
                 width: auto
 
-                button.navbar-toggler
-                    height: 26px
-                    width: 26px
+                #menuToggle
+                    overflow: hidden
+                    width: auto
+                    height: auto
                     display: flex
-                    justify-content: center
+                    flex-direction: column
+                    justify-content: flex-end
                     align-items: center
+                    z-index: 11000
                     border-width: 0
-                    outline: none  
-                    margin-left: 30px
-                    padding: 0
 
-                    img
-                        height: 100%
-                        width: 100%
+                    input
+                        display: flex
+                        width: 30px
+                        height: 30px
+                        position: absolute
+                        cursor: pointer
+                        opacity: 0
+                        z-index: 11000
 
-                    .icon-menu-hover
-                        display: none
+                    span
+                        width: 30px
+                        height: 2px
+                        margin-bottom: 8px
+                        background: #fff
+                        border-radius: 4px
+                        transition: all .6s cubic-bezier(.08,.81,.87,.71)
 
-                    &:hover
-                        .icon-menu
-                            display: none
-                        .icon-menu-hover
-                            display: block
-                            
+                    #span1
+                        transform-origin: 4px 0px
+
+                    #span3
+                        transform-origin: bottom right
+                        margin-bottom: 0
+
+                    input:checked ~ #span1 
+                        background-color: #0c2461
+                        transform: rotate(45deg) translate(5px)
+
+                    input:checked ~ #span2 
+                        background-color: #0c2461
+                        transform: rotate(495deg) translate(2px)
+                        
+                    input:checked ~ #span3
+                        background-color: #0c2461
+                        transform: rotate(45deg)
+                        opacity: 0
 
                 a
                     text-decoration: none
@@ -190,6 +187,7 @@
                     +PT
                     font-size: 18px
                     padding-top: 2px
+                    margin-right: 10px
 
 
         .header_mane
