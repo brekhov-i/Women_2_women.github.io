@@ -1,0 +1,126 @@
+.section-unic
+    height: 100vh
+
+    &__content
+        height: 100vh
+        width: 100%
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .mramor, .gold_fon
+            position: absolute
+            display: block
+            width: 80%
+
+        .gold_fon
+            top: 40px
+            right: -40px
+
+        .mramor
+            bottom: 40px
+            left: -40px
+        
+        .carts
+            background-color: $color-white
+            box-shadow: 0 0 7px 1px rgba(0, 0, 1, 0.36)
+            height: auto
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            position: relative
+
+            .cart
+                position: relative
+                width: 50%
+                height: auto
+                padding: 40px 50px
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                overflow: hidden
+                transition: 0.8s all
+
+                img.bg__hover-fon
+                    opacity: 0
+                    width: 100%
+                    height: auto
+                    position: absolute
+                    top: 0
+                    left: 0
+                    transition: 0.8s all
+
+                .temno
+                    opacity: 0
+                    transition: 0.4s all
+
+                .unic__title
+                    position: relative
+                    font-size: 28px
+                    color: #1f2024
+                    width: 340px
+                    font-weight: 400
+                    +PT
+
+                p.number
+                    position: relative
+                    color: $color-text
+                    font-size: 38px
+                    +PT
+                    font-weight: 400
+                    margin-bottom: 20px
+
+                .cart__title
+                    position: relative
+                    color: #1d1f23
+                    font-size: 22px
+                    +PT
+                    font-weight: 400
+
+                hr
+                    position: relative
+                    width: 170px
+                    height: 2px
+                    background-color: $color-text
+                    border-width: 0
+                    margin: 0
+                    margin: 20px 0
+
+                p.cart__text
+                    position: relative
+                    color: #1d1f23
+                    font-size: 15px
+                    font-weight: 400
+                    line-height: 22px
+                    +PT
+
+                &:hover
+                    position: relative
+                    .temno
+                        display: block
+                        background-color: #000000
+                        opacity: 0.75
+                    img.bg__hover-fon
+                        opacity: 1
+                    p.number
+                        color: #ffffff
+                    .cart__title
+                        color: #ffffff
+                    p.cart__text
+                        color: #ffffff
+
+            .cart1
+                justify-content: center
+
+            .cart2
+                p.cart__text
+                    width: 328px
+
+            .cart3
+                p.cart__text
+                    width: 380px
+
+            .cart4
+                p.cart__text
+                    width: 390px

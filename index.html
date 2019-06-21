@@ -1,382 +1,919 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Women 2 Women</title>
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
-            rel="stylesheet">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    </head>
+</head>
+<body>
+    <div class="button_top">
+        <img src="img/icon/up-arrow.svg" alt="arrow-up">
+    </div>
 
-    <body>
-    
+    <!-- Всплывающее меню -->
 
-        <div class="modal-window">
-            <div class="container">
-                <div class="modal-window-content">
-                    <button type="button" class="modal_close" data-dismiss="modal" aria-label="Close"><img src="image/close.png" alt="close"></button>
-                    <div class="col1">
-                        <h1>Будь в потоке!</h1>
-                        <h6>Нам приятно, что ты развиваешься и идешь
+    <div class="popup nav navbar-toggle">
+        <div class="nav__bg wow" data-wow-duration="2.5s">
+            <img src="img/header/menu.png" alt="">
+        </div>
+        <div class="nav-menu wow" data-wow-duration="2.5s">
+            <button class="btn-close nav-close"><img src="img/icon/close.svg" alt="close"></button>
+            <ul class="navbar-menu">
+                <li>
+                    <a href="#" class="nav-menu__link">
+                        <hr>
+                        <p class="number">01.</p>
+                        Школа
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-menu__link">
+                        <hr>
+                        <p class="number">02.</p>
+                        Клуб
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-menu__link">
+                        <hr>
+                        <p class="number">03.</p>
+                        Блог
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-menu__link">
+                        <hr>
+                        <p class="number">04.</p>
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+            <button class="nav-menu__presoed " data-wow-duration="2.5s">
+                <img src="img/icon/logo.svg" alt="logo">
+                Присоединиться<br>
+                к сообществу
+            </button>
+        </div>
+    </div>
+
+    <!-- Всплывающее окно на кнопки Присоединиться -->
+
+    <div class="popup popup__btn">
+        <div class="container">
+            <div class="content">
+                <div class="popup-content wow">
+                    <h1 class="title popup__title">Будь в потоке!</h1>
+                    <p class="popup__text">Нам приятно, что ты развиваешься и идешь
                         в новизну! Вдвойне приятно, что ты выбираешь
-                        делать это вместе с нами!</h6>
-                        
-                        <p>Подпишись на рассылку - будь в курсе последних
+                        делать это вместе с нами!</p>
+                    <span class="popup__subtitle">Подпишись на рассылку - будь в курсе последних
                         новостей и событий в мире женского бизнеса!
                         Заряжайся историями успеха и перенимай
-                        опыт воплощенных женщин!</p>
+                        опыт воплощенных женщин!</span>
+                </div>
+                <div class="popup-contactform wow">
+                    <button class="btn-close popup-contactform__close"><img src="img/icon/close.svg" alt="close"></button>
+                    <form action="#" class="contactform">
+                        <input type="text" name="name" id="name" placeholder="Укажи свое имя">
+                        <input type="tel" name="phone" id="phone" placeholder="Твой номер телефона">
+                        <input type="email" name="email" id="email" placeholder="E-mail">
+                        <input type="submit" value="Подписаться">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header -->
+
+    <header class="header">
+        <video id="video" width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto">
+            <source src="video/videofon.mp4"></source>
+        </video>
+        <div class="temno"></div>
+        <img src="img/icon/Линии.png" alt="line" class="line">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-nav">
+                    <a href="index.html" class="navbar-brand"><img src="img/icon/logo.svg" alt="logo"></a>
+                    <a href="tel:+7(968)088-55-77" class="header-phone">+7 (968) 088-55-77</a>
+                    <button class="btn-open btn__navbar-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="header-text">
+                    <div class="soc-seti">
+                        <a href="#"> <img src="img/header/insta.png" alt="insta"></a>
+                        <a href="#"><img src="img/header/youtube.png" alt="youtube"></a>
+                        <a href="#"><img src="img/header/facebook.png" alt="facebook"></a>
                     </div>
-                    <div class="col2">
-                        <form id="contactForm" class="contactForm" action="handler.php" method="POST">
-                            <div class="field-block">
-                                <input id="name" class="field" name="name" required type="text" placeholder="Имя">
-                            </div>
-                            <div class="field-block">
-                                <input id="phone" class="field" name="phone" required type="text" placeholder="Телефон">
-                            </div>
-                            <div class="field-block">
-                                <input id="email" class="field" name="email" type="email" placeholder="E-mail">
-                            </div>
-                            <button id="button" class="button" type="submit">Подписаться</button>
-                            <div class="result">
-                                <span id="answer"></span>
-                            </div>
-                        </form>
+                    <h1 class="title header__title">women2women</h1>
+                    <h5 class="header__subtitle">образовательный бизнес-проект для женщин</h5>
+                    <button class="btn btn__presoed">Присоединиться</button>
+                    <div class="btn-mouse">
+                        <a href="#tabs" class="btn__mouse"><img src="img/icon/mouse.png" alt="mouse"></a>
+                        <marquee><div></div></marquee>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
 
-        <!-- Header -->
-        <header class="header">
-            <video preload="auto" autoplay="true" loop="true" muted="muted">
-                <source src="video/videofon.mp4" type="video/mp4">
-            </video>
-            <div class="temno"></div>
-            <div class="line"><img src="image/header/Линии.png" alt="" class="lazy"></div>
-            <div class="navbar-collapse row" id="navbarSupportedContent">
-                <div class="col-7 col1">
-                </div>
-                <div class="col-5 col2">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <hr class="line-nav-link">
-                            <p class="number">01.</p>
-                            <a class="nav-link" href="#">Школа</a>
-                        </li>
-                        <li class="nav-item">
-                            <hr class="line-nav-link">
-                            <p class="number">02.</p>
-                            <a class="nav-link" href="#">Клуб</a>
-                        </li>
-                        <li class="nav-item">
-                            <hr class="line-nav-link">
-                            <p class="number">03.</p>
-                            <a class="nav-link" href="#">Блог</a>
-                        </li>
-                        <li class="nav-item">
-                            <hr class="line-nav-link">
-                            <p class="number">04.</p>
-                            <a class="nav-link" href="#">Контакты</a>
-                        </li>
+    <!-- section-tabs -->
+
+    <section class="section-tabs">
+        <div class="container">
+            <div class="tabs">
+                <img src="img/icon/mramor.png" alt="mramor" class="mramor">
+                <div class="tabs-content" id="tabs">
+                    <ul class="tabs-links">
+                        <a class="tab__link active">Школа</a>
+                        <a class="tab__link">Клуб</a>
+                        <a class="tab__link">Блог</a>
                     </ul>
-                    <div class="button-presoed">
-                        <img src="image/logo.png" alt="logo">
-                        <a href="#">Присоединиться к сообществу</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="header-content">
-                    <div class="soc-nav">
-                        <a href="#" class="soc-link insta"><img src="image/header/insta.png" alt="insta"></a>
-                        <a href="#" class="soc-link youtube"><img src="image/header/youtube.png" alt="youtube"></a>
-                        <a href="#" class="soc-link facebook"><img src="image/header/facebook.png" alt="facebook"></a>
-                    </div>
-                    <nav class="navbar navbar-expand-none navbar-light">
-                        <a class="navbar-brand" href="index.html"><img src="image/logo.png" alt="logo"></a>
-                        <div class="navbar-phone">
-                            <a href="tel: +7 (968) 088-55-77 " class="header-phone">+7 (968) 088-55-77</a>
-                            <div id="menuToggle" class="navbar-toggler">
-                                <input type="checkbox" class="" />
-                                <span id="span1"></span>
-                                <span id="span2"></span>
-                                <span id="span3"></span>
+                    <div class="tabs__content">
+                        <div class="tab tab__one active" id="tab__one">
+                            <div class="col1 wow fadeInLeft">
+                                <ul>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">01.</p>
+                                        <p class="tab__text">Преподаватели школы - <br>
+                                            женщины-практики <br>
+                                            из бизнеса</p>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">02.</p>
+                                        <p class="tab__text">Обучение в формате <br>
+                                            теория + практика</p>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">03.</p>
+                                        <p class="tab__text">Есть ВУЗ, есть МВА. <br>
+                                            А у нас вы найдете новый <br>
+                                            формат 21-го века!</p>
+                                    </li>
+                                </ul>
                             </div>
+                            <div class="col2 wow fadeInRight">
+                                <img src="img/section_founder/goldfon.png" alt="" class="gold__img">
+                                <img src="img/section_founder/fontab1.png" alt="" class="tab__img tab1__img">
+                            </div>
+                            <a href="#" class="tab-link__more">Узнать больше <img src="img/icon/arrow.png" alt="arrow"></a>
                         </div>
-                    </nav>
-                    <div class="header_mane">
-                        <h1 class="header-title">women2women</h1>
-                        <h4 class="header-text">образовательный бизнес-проект для женщин</h4>
-                        <button class="btn btn-join">Присоединиться</button>
-                        <div class="block-mouse">
-                            <a href="#tabs-content" class="link-mouse"><img src="image/link-mouse.png" alt="mouse"></a>
-                            <marquee direction="up"><div></div></marquee>
+                        <div class="tab tab__two" id="tab__two">
+                            <div class="col1 wow fadeInLeft">
+                                <ul>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">01.</p>
+                                        <p class="tab__text">Возможность знакомства <br>
+                                            с представительницами малого <br>
+                                            и среднего бизнеса</p>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">02.</p>
+                                        <p class="tab__text">Обмен бизнес опытом <br>
+                                            и знаниями</p>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">03.</p>
+                                        <p class="tab__text">Полезные связи и решение <br>
+                                            любых вопросов</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col2 wow fadeInRight">
+                                <ul>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">04.</p>
+                                        <p class="tab__text">Доступ к закрытому чату <br>
+                                            и онлайн-платформе</p>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">05.</p>
+                                        <p class="tab__text">Посещение закрытого клуба</p>
+                                    </li>
+                                </ul>
+                                <img src="img/section_founder/goldfon1.png" alt="" class="gold1__img">
+                                <img src="img/section_founder/fontab2.png" alt="" class="tab__img tab2__img">
+                            </div>
+                            <a href="#" class="tab-link__more">Узнать больше <img src="img/icon/arrow.png" alt="arrow"></a>
+                        </div>
+                        <div class="tab tab__three" id="tab__three">
+                            <div class="col1 wow fadeInLeft">
+                                <ul>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">01.</p>
+                                        <p class="tab__text">Журнал с историями <br>
+                                            успешных женщин</p>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">02.</p>
+                                        <p class="tab__text">Практические полезные<br>
+                                            статьи от экспертов</p>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">03.</p>
+                                        <p class="tab__text">Статьи выпускников <br>
+                                            и членов клуба</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col2 wow fadeInRight">
+                                <ul>
+                                    <li>
+                                        <hr>
+                                        <p class="tab__number">04.</p>
+                                        <p class="tab__text">Новости из бизнеса</p>
+                                    </li>
+                                </ul>
+                                <img src="img/section_founder/goldfon2.png" alt="" class="gold2__img">
+                                <img src="img/section_founder/fontab3.png" alt="" class="tab__img tab3__img">
+                            </div>
+                            <a href="#" class="tab-link__more">Узнать больше <img src="img/icon/arrow.png" alt="arrow"></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+            <div class="osnovatel">
+                <div class="col1">
+                    <div class="osnovatel__ava wow fadeInLeft">
+                        <img src="img/icon/osnovat-fon.png" alt="fon" class="fon">
+                        <img src="img/section_founder/avatar.png" alt="avatar" class="avatar">
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="osnovatel-text wow fadeInRight">
+                        <h1 class="osnovatel__title">Идеолог и основатель <br>
+                        проекта</h1>
+                        <p class="osnovatel__text">
+                            Меня зовут Юлия Бадун и я являюсь основательницей образовательного бизнес-проекта WOMEN2WOMEN
+                            <br><br>
+                            Мы все разные, и у каждой из нас свои задачи. Задача нашего сообщества – сделать ваш бизнес успешным, а вас счастливыми.
+                            Помогая Вам, мы развиваем женское предпринимательство в России.
+                        </p>
+                        <a href="#" class="tab-link__more">Узнать больше о Юлии <img src="img/icon/arrow.png" alt="arrow"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Section tabs -->
-        <section class="section-tabs">
-            <img src="image/header/Линии.png" alt="" class="line">
-            <div class="container">
-                <div class="section-tabs-content">
-                    <div class="tabs">
-                        <img src="image/section-tabs/mramor.png" alt="mramor" class="mramor">
-                        <div class="tabs-content" id="tabs-content">
-                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active scroll" id="pills-school-tab" data-toggle="pill" href="#pills-school" role="tab"
-                                        aria-controls="pills-school" aria-selected="true">Школа</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link scroll" id="pills-club-tab" data-toggle="pill" href="#pills-club" role="tab"
-                                        aria-controls="pills-club" aria-selected="false">Клуб</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link scroll" id="pills-blog-tab" data-toggle="pill" href="#pills-blog" role="tab"
-                                        aria-controls="pills-blog" aria-selected="false">Блог</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-school" role="tabpanel" aria-labelledby="pills-scholl-tab">
-                                    <div class="tab-pane-content">
-                                        <div class="col1">
-                                            <div class="cart cart1">
-                                                <hr>
-                                                <p class="number">01.</p>
-                                                <h6 class="cart-text">Преподаватели школы - женщины-практики из бизнеса</h6>
-                                            </div>
-                                            <div class="cart cart2">
-                                                <hr>
-                                                <p class="number">02.</p>
-                                                <h6 class="cart-text">Обучение в формате теория + практика</h6>
-                                            </div>
-                                            <div class="cart cart3">
-                                                <hr>
-                                                <p class="number">03.</p>
-                                                <h6 class="cart-text">Есть ВУЗ, есть МВА. А у нас вы найдете новый формат 21-го века!</h6>
-                                            </div>
-                                        </div>
-                                        <div class="col2">
-                                            <div class="pane-img">
-                                                <img src="image/section-tabs/img1.png" alt="fon1">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="pills-club" role="tabpanel" aria-labelledby="pills-club-tab">
-                                    <div class="tab-pane-content">
-                                        <div class="col1">
-                                            <div class="cart cart1">
-                                                <hr>
-                                                <p class="number">01.</p>
-                                                <h6 class="cart-text">Преподаватели школы - женщины-практики из бизнеса</h6>
-                                            </div>
-                                            <div class="cart cart2">
-                                                <hr>
-                                                <p class="number">02.</p>
-                                                <h6 class="cart-text">Обучение в формате теория + практика</h6>
-                                            </div>
-                                            <div class="cart cart3">
-                                                <hr>
-                                                <p class="number">03.</p>
-                                                <h6 class="cart-text">Есть ВУЗ, есть МВА. А у нас вы найдете новый формат 21-го века!</h6>
-                                            </div>
-                                        </div>
-                                        <div class="col2">
-                                            <div class="pane-img">
-                                                <img src="image/section-tabs/img1.png" alt="fon1">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="pills-blog" role="tabpanel" aria-labelledby="pills-blog-tab">
-                                    <div class="tab-pane-content">
-                                        <div class="col1">
-                                            <div class="cart cart1">
-                                                <hr>
-                                                <p class="number">01.</p>
-                                                <h6 class="cart-text">Преподаватели школы - женщины-практики из бизнеса</h6>
-                                            </div>
-                                            <div class="cart cart2">
-                                                <hr>
-                                                <p class="number">02.</p>
-                                                <h6 class="cart-text">Обучение в формате теория + практика</h6>
-                                            </div>
-                                            <div class="cart cart3">
-                                                <hr>
-                                                <p class="number">03.</p>
-                                                <h6 class="cart-text">Есть ВУЗ, есть МВА. А у нас вы найдете новый формат 21-го века!</h6>
-                                            </div>
-                                        </div>
-                                        <div class="col2">
-                                            <div class="pane-img">
-                                                <img src="image/section-tabs/img1.png" alt="fon1">
-                                            </div>
-                                        </div>
-                                    </div>
+    <!-- section-unic -->
+
+    <section class="section-unic">
+        <div class="container">
+            <div class="section-unic__content">
+                <img src="img/section_unic/mramor.png" alt="mramor" class="mramor">
+                <img src="img/section_unic/gold.png" alt="gold" class="gold_fon">
+                <div class="carts">
+                    <div class="cart cart1 wow fadeInDown">
+                        <h1 class="unic__title">Уникальность <br>
+                        образовательного <br>
+                        формата<br>
+                        WOMEN2WOMEN</h1>
+                    </div>
+                    <div class="cart cart2 wow fadeInRight">
+                        <img src="img/section_unic/bg-cart1.png" alt="" class="bg__hover-fon">
+                        <div class="temno"></div>
+                        <p class="number">01.</p>
+                        <h1 class="cart__title">Многотысячная аудитория</h1>
+                        <hr>
+                        <p class="cart__text">Наш проект уже объединил тысячи единомышленниц, в кругу которых вы сможете решить любой свой вопрос мгновенно</p>
+                    </div>
+                    <div class="cart cart3 wow fadeInLeft">
+                        <img src="img/section_unic/bg-cart2.png" alt="" class="bg__hover-fon">
+                        <div class="temno"></div>
+                        <p class="number">02.</p>
+                        <h1 class="cart__title">Авторская методика</h1>
+                        <hr>
+                        <p class="cart__text">Образовательный формат WOMEN2WOMEN разработан по уникальной методике передачи знаний от женщин к женщинам. Именно
+                        женщина лучше всего на своем примере расскажет, как совмещать семью и свое дело</p>
+                    </div>
+                    <div class="cart cart4 wow fadeInUp">
+                        <img src="img/section_unic/bg-cart3.png" alt="" class="bg__hover-fon">
+                        <div class="temno"></div>
+                        <p class="number">03.</p>
+                        <h1 class="cart__title">Новый формат</h1>
+                        <hr>
+                        <p class="cart__text">Мы создали качественно новый формат образования, отличный от традиционного обучения, в котором любая женщина сможет
+                        почувствовать себя комфортно и получить необходимую поддержку. Вам не нужно будет думать о том, как не выглядеть смешно
+                        или глупо в глазах мужчин - будьте сами собой!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-face -->
+    <section class="section-face">
+        <img src="img/icon/Линии.png" alt="line" class="line">
+        <div class="container">
+            <div class="section-face__content">
+                <div class="col1">
+                    <h1 class="section-face__title">Лица<br>проекта</h1>
+                    <p class="section-face__text">Это люди, чьи идеи <br>
+                        и опыт мы интегрировали <br>
+                        в проект <span>Women2Women</span>.
+                    <br><br>
+                    Женщины, которые <br>
+                    расскажут как гармонично <br>
+                    развиваться во всех сферах <br>
+                    жизни одновременно.</p>
+                    <div class="section-face__slider__arrows arrows">
+                        <button class="arrow_prev section-face_prev"><img src="img/icon/arrowPrev.png" alt="arrowprev"></button>
+                        <button class="arrow_next section-face_next"><img src="img/icon/arrowNext.png" alt="arrownext"></button>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="slider section-face__slider owl-carousel">
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_face/goldfon.png" alt="goldfon" class="goldfon">
+                                <img src="img/section_face/face1.png" alt="face" class="face face1">
+                                <img src="img/section_face/mramor.png" alt="mramor" class="mramor">
+                            </div>
+                            <div class="col2">
+                                <h1 class="title slide__name">Юлия Бадун</h1>
+                                <ul class="slide__text">
+                                    <li>Предприниматель</li>
+                                    <li>Бизнес-спикер крупнейших форумов и конференций</li>
+                                    <li>Эксперт при Министерстве экономического развития</li>
+                                    <li>Совладелица топовой Event-компании России Big Jack</li>
+                                    <li>
+                                        Основательница образовательного бизнес-проекта WOMEN2WOMEN <br>
+                                        и проекта ПЕРВАЯ ЖЕНСКАЯ ШКОЛА <br>
+                                        БИЗНЕСА
+                                    </li>
+                                </ul>
+                                <div class="slide__number">
+                                    <p class="number">01</p>
+                                    <hr>
+                                    <p class="long">08</p>
                                 </div>
                             </div>
-                            <a href="#" class="arrow">Узнать больше <img src="image/section-tabs/arrow.png" alt="arrow"></a>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_face/goldfon.png" alt="goldfon" class="goldfon">
+                                <img src="img/section_face/face1.png" alt="face" class="face face1">
+                                <img src="img/section_face/mramor.png" alt="mramor" class="mramor">
+                            </div>
+                            <div class="col2">
+                                <h1 class="title slide__name">Юлия Бадун</h1>
+                                <ul class="slide__text">
+                                    <li>Предприниматель</li>
+                                    <li>Бизнес-спикер крупнейших форумов и конференций</li>
+                                    <li>Эксперт при Министерстве экономического развития</li>
+                                    <li>Совладелица топовой Event-компании России Big Jack</li>
+                                    <li>
+                                        Основательница образовательного бизнес-проекта WOMEN2WOMEN <br>
+                                        и проекта ПЕРВАЯ ЖЕНСКАЯ ШКОЛА <br>
+                                        БИЗНЕСА
+                                    </li>
+                                </ul>
+                                <div class="slide__number">
+                                    <p class="number">02</p>
+                                    <hr>
+                                    <p class="long">08</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_face/goldfon.png" alt="goldfon" class="goldfon">
+                                <img src="img/section_face/face1.png" alt="face" class="face face1">
+                                <img src="img/section_face/mramor.png" alt="mramor" class="mramor">
+                            </div>
+                            <div class="col2">
+                                <h1 class="title slide__name">Юлия Бадун</h1>
+                                <ul class="slide__text">
+                                    <li>Предприниматель</li>
+                                    <li>Бизнес-спикер крупнейших форумов и конференций</li>
+                                    <li>Эксперт при Министерстве экономического развития</li>
+                                    <li>Совладелица топовой Event-компании России Big Jack</li>
+                                    <li>
+                                        Основательница образовательного бизнес-проекта WOMEN2WOMEN <br>
+                                        и проекта ПЕРВАЯ ЖЕНСКАЯ ШКОЛА <br>
+                                        БИЗНЕСА
+                                    </li>
+                                </ul>
+                                <div class="slide__number">
+                                    <p class="number">03</p>
+                                    <hr>
+                                    <p class="long">08</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_face/goldfon.png" alt="goldfon" class="goldfon">
+                                <img src="img/section_face/face1.png" alt="face" class="face face1">
+                                <img src="img/section_face/mramor.png" alt="mramor" class="mramor">
+                            </div>
+                            <div class="col2">
+                                <h1 class="title slide__name">Юлия Бадун</h1>
+                                <ul class="slide__text">
+                                    <li>Предприниматель</li>
+                                    <li>Бизнес-спикер крупнейших форумов и конференций</li>
+                                    <li>Эксперт при Министерстве экономического развития</li>
+                                    <li>Совладелица топовой Event-компании России Big Jack</li>
+                                    <li>
+                                        Основательница образовательного бизнес-проекта WOMEN2WOMEN <br>
+                                        и проекта ПЕРВАЯ ЖЕНСКАЯ ШКОЛА <br>
+                                        БИЗНЕСА
+                                    </li>
+                                </ul>
+                                <div class="slide__number">
+                                    <p class="number">04</p>
+                                    <hr>
+                                    <p class="long">08</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_face/goldfon.png" alt="goldfon" class="goldfon">
+                                <img src="img/section_face/face1.png" alt="face" class="face face1">
+                                <img src="img/section_face/mramor.png" alt="mramor" class="mramor">
+                            </div>
+                            <div class="col2">
+                                <h1 class="title slide__name">Юлия Бадун</h1>
+                                <ul class="slide__text">
+                                    <li>Предприниматель</li>
+                                    <li>Бизнес-спикер крупнейших форумов и конференций</li>
+                                    <li>Эксперт при Министерстве экономического развития</li>
+                                    <li>Совладелица топовой Event-компании России Big Jack</li>
+                                    <li>
+                                        Основательница образовательного бизнес-проекта WOMEN2WOMEN <br>
+                                        и проекта ПЕРВАЯ ЖЕНСКАЯ ШКОЛА <br>
+                                        БИЗНЕСА
+                                    </li>
+                                </ul>
+                                <div class="slide__number">
+                                    <p class="number">05</p>
+                                    <hr>
+                                    <p class="long">08</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_face/goldfon.png" alt="goldfon" class="goldfon">
+                                <img src="img/section_face/face1.png" alt="face" class="face face1">
+                                <img src="img/section_face/mramor.png" alt="mramor" class="mramor">
+                            </div>
+                            <div class="col2">
+                                <h1 class="title slide__name">Юлия Бадун</h1>
+                                <ul class="slide__text">
+                                    <li>Предприниматель</li>
+                                    <li>Бизнес-спикер крупнейших форумов и конференций</li>
+                                    <li>Эксперт при Министерстве экономического развития</li>
+                                    <li>Совладелица топовой Event-компании России Big Jack</li>
+                                    <li>
+                                        Основательница образовательного бизнес-проекта WOMEN2WOMEN <br>
+                                        и проекта ПЕРВАЯ ЖЕНСКАЯ ШКОЛА <br>
+                                        БИЗНЕСА
+                                    </li>
+                                </ul>
+                                <div class="slide__number">
+                                    <p class="number">06</p>
+                                    <hr>
+                                    <p class="long">08</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_face/goldfon.png" alt="goldfon" class="goldfon">
+                                <img src="img/section_face/face1.png" alt="face" class="face face1">
+                                <img src="img/section_face/mramor.png" alt="mramor" class="mramor">
+                            </div>
+                            <div class="col2">
+                                <h1 class="title slide__name">Юлия Бадун</h1>
+                                <ul class="slide__text">
+                                    <li>Предприниматель</li>
+                                    <li>Бизнес-спикер крупнейших форумов и конференций</li>
+                                    <li>Эксперт при Министерстве экономического развития</li>
+                                    <li>Совладелица топовой Event-компании России Big Jack</li>
+                                    <li>
+                                        Основательница образовательного бизнес-проекта WOMEN2WOMEN <br>
+                                        и проекта ПЕРВАЯ ЖЕНСКАЯ ШКОЛА <br>
+                                        БИЗНЕСА
+                                    </li>
+                                </ul>
+                                <div class="slide__number">
+                                    <p class="number">07</p>
+                                    <hr>
+                                    <p class="long">08</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_face/goldfon.png" alt="goldfon" class="goldfon">
+                                <img src="img/section_face/face1.png" alt="face" class="face face1">
+                                <img src="img/section_face/mramor.png" alt="mramor" class="mramor">
+                            </div>
+                            <div class="col2">
+                                <h1 class="title slide__name">Юлия Бадун</h1>
+                                <ul class="slide__text">
+                                    <li>Предприниматель</li>
+                                    <li>Бизнес-спикер крупнейших форумов и конференций</li>
+                                    <li>Эксперт при Министерстве экономического развития</li>
+                                    <li>Совладелица топовой Event-компании России Big Jack</li>
+                                    <li>
+                                        Основательница образовательного бизнес-проекта WOMEN2WOMEN <br>
+                                        и проекта ПЕРВАЯ ЖЕНСКАЯ ШКОЛА <br>
+                                        БИЗНЕСА
+                                    </li>
+                                </ul>
+                                <div class="slide__number">
+                                    <p class="number">08</p>
+                                    <hr>
+                                    <p class="long">08</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="osnovatel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-progress -->
+    <section class="section-progress">
+        <div class="section-progress__slider owl-carousel">
+            <div class="slide slide1">
+                <div class="temno"></div>
+                <div class="container">
+                    <div class="slide__content">
+                        <div class="col1 wow fadeInLeft">
+                            <h1 class="slide__title">Наши <br>
+                                достижения</h1>
+                            <hr>
+                            <div class="arrows">
+                                <button class="arrow_prev owl-prev"><img src="img/icon/arrowPrev.png" alt="arrowprev"></button>
+                                <button class="arrow_next owl-next"><img src="img/icon/arrowNext.png" alt="arrownext"></button>
+                            </div>
+                        </div>
+                        <div class="col2 wow fadeInRight">
+                            <h1 class="slide__subtitle"><span>4</span> потока</h1>
+                            <p class="slide__text">очного обучения выпустила <br>
+                                школа WOMEN2WOMEN</p>
+                            <div class="slide__number">
+                                <p class="number">01</p>
+                                <hr>
+                                <p class="long">04</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="temno"></div>
+                <div class="container">
+                    <div class="slide__content">
+                        <div class="col1 wow fadeInLeft">
+                            <h1 class="slide__title">Наши <br>
+                                достижения</h1>
+                            <hr>
+                            <div class="arrows">
+                                <button class="arrow_prev owl-prev"><img src="img/icon/arrowPrev.png" alt="arrowprev"></button>
+                                <button class="arrow_next owl-next"><img src="img/icon/arrowNext.png" alt="arrownext"></button>
+                            </div>
+                        </div>
+                        <div class="col2 wow fadeInRight">
+                            <h1 class="slide__subtitle"><span>500</span> учениц</h1>
+                            <p class="slide__text">прошли наше обучение</p>
+                            <div class="slide__number">
+                                <p class="number">02</p>
+                                <hr>
+                                <p class="long">04</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slide3">
+                <div class="temno"></div>
+                <div class="container">
+                    <div class="slide__content">
                         <div class="col1">
-                            <div class="img-osnovatel">
-                                <img src="image/section-tabs/yuly.png" alt="yuly">
+                            <h1 class="slide__title">Наши <br>
+                                достижения</h1>
+                            <hr>
+                            <div class="arrows">
+                                <button class="arrow_prev owl-prev"><img src="img/icon/arrowPrev.png" alt="arrowprev"></button>
+                                <button class="arrow_next owl-next"><img src="img/icon/arrowNext.png" alt="arrownext"></button>
                             </div>
                         </div>
                         <div class="col2">
-                            <h1>Идеолог и основатель проекта</h1>
-                            <p>Меня зовут Юлия Бадун и я являюсь основательницей образовательного бизнес-проекта WOMEN2WOMEN <br>
-                            <br>
-                            Мы все разные, и у каждой из нас свои задачи. Задачей нашего сообщества является сделать ваш бизнес успешным, а вас
-                            счастливыми.
-                            Помогая Вам, развиваем женское предпринимательство в России.</p>
-
-                            <a href="#">Узнать больше о Юлии <img src="image/section-tabs/arrow.png" alt="arrow"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section unic -->
-        <section class="section-unic">
-            <img src="image/section-unic/mramor2.png" alt="mramor" class="mramor">
-            <img src="image/section-unic/gold-fon.png" alt="gold-fon" class="gold-fon">
-            <div class="container">
-                <div class="section-unic-content">
-                    <div class="carts">
-                        <div class="row1">
-                            <div class="cart cart-unic cart1">
-                                <h1>Уникальность образовательного формата WOMEN2WOMEN</h1>
-                            </div>
-                            <div class="cart cart-unic cart2">
-                                <p class="number">01.</p>
-                                <h3 class="cart-title">Многотысячная аудитория</h3>
+                            <h1 class="slide__subtitle"><span>750</span> часов</h1>
+                            <p class="slide__text">личных консультаций <br>
+                            от преподавателей школы</p>
+                            <div class="slide__number">
+                                <p class="number">03</p>
                                 <hr>
-                                <p class="cart-text">Наш проект уже объединил тысячи единомышленниц, в кругу которых вы сможете решить любой
-                                    свой вопрос мгновенно</p>
-                            </div>
-                        </div>
-                        <div class="row2">
-                            <div class="cart cart-unic cart3">
-                                <p class="number">02.</p>
-                                <h3 class="cart-title">Авторская методика</h3>
-                                <hr>
-                                <p class="cart-text">Образовательный формат WOMEN2WOMEN разработан по уникальной методике передачи знаний от
-                                    женщин к женщинам. Именно женщина лучше всего на своем примере расскажет, как совмещать семью и свое дело
-                                </p>
-                            </div>
-                            <div class="cart cart-unic cart4">
-                                <p class="number">03.</p>
-                                <h3 class="cart-title">Новый формат</h3>
-                                <hr>
-                                <p class="cart-text">Мы создали качественно новый формат образования, отличный от традиционного обучения, в
-                                    котором любая женщина сможет почувствовать себя комфортно и получить необходимую поддержку. Вам не нужно
-                                    будет думать о том, как не выглядеть смешно или глупо в глазах мужчин - будьте сами собой!</p>
+                                <p class="long">04</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Section person -->
-        <section class="section-person">
-            <img src="image/header/Линии.png" alt="" class="line">
-            <div class="container">
-                <div class="section-person-content">
-                    <div class="col1">
-                        <h1 class="title-section">Лица проекта</h1>
-                        <p class="text-section">Это люди, чьи идеи и опыт мы интегрировали в проект <span>Women2Women</span>.
-                        <br><br> 
-                        Женщины, которые расскажут как гармонично развиваться во всех сферах жизни</p>
-                        <div class="arrow">
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <img src="image/arrow-prev.png" alt="prev">
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <img src="image/arrow-next.png" alt="next">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col2">
-                        <div class="slick-slider">
-                            <div class="slide">
-                                <div class="slide-content">
-                                    <div class="col1">
-                                        <img src="image/section-unic/gold-fon.png" alt="" class="gold-fon">
-                                        <img src="image/section-person/img1.png" alt="" class="person">
-                                        <img src="image/section-person/mramor.png" alt="" class="mramor-fon">
-                                    </div>
-                                    <div class="col2">
-                                        <h4>Юлия Бадун</h4>
-                                        <p>Предприниматель
-                                        Бизнес-спикер крупнейших форумов и конференций
-                                        Эксперт при Министерстве экономического развития
-                                        Совладелица топовой Event-компании России Big JackОсновательница образовательного бизнес-проекта WOMEN2WOMEN
-                                        и проекта ПЕРВАЯ ЖЕНСКАЯ ШКОЛА
-                                        БИЗНЕСА</p>
-                                        <div class="number-slide">
-                                            <h5>01</h5>
-                                            <hr>
-                                            <h6>08</h6>
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="slide slide4">
+                <div class="temno"></div>
+                <div class="container">
+                    <div class="slide__content">
+                        <div class="col1">
+                            <h1 class="slide__title">Наши <br>
+                                достижения</h1>
+                            <hr>
+                            <div class="arrows">
+                                <button class="arrow_prev owl-prev"><img src="img/icon/arrowPrev.png" alt="arrowprev"></button>
+                                <button class="arrow_next owl-next"><img src="img/icon/arrowNext.png" alt="arrownext"></button>
                             </div>
-                            <div class="slide">
-                                <div class="slide-content">
-                                    <div class="col1">
-                                        <img src="image/section-unic/gold-fon.png" alt="" class="gold-fon">
-                                        <img src="image/section-person/img1.png" alt="" class="person">
-                                        <img src="image/section-person/mramor.png" alt="" class="mramor-fon">
-                                    </div>
-                                    <div class="col2">
-                                        <h4>Юлия Бадун</h4>
-                                        <p>Предприниматель
-                                            Бизнес-спикер крупнейших форумов и конференций
-                                            Эксперт при Министерстве экономического развития
-                                            Совладелица топовой Event-компании России Big JackОсновательница образовательного бизнес-проекта
-                                            WOMEN2WOMEN
-                                            и проекта ПЕРВАЯ ЖЕНСКАЯ ШКОЛА
-                                            БИЗНЕСА</p>
-                                        <div class="number-slide">
-                                            <h5>01</h5>
-                                            <hr>
-                                            <h6>08</h6>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col2">
+                            <h1 class="slide__subtitle"><span>2</span> представительства</h1>
+                            <p class="slide__text">Москва и Краснодар</p>
+                            <div class="slide__number">
+                                <p class="number">04</p>
+                                <hr>
+                                <p class="long">04</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        
+        </div>
+    </section>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="js/jquery.lazy.min.js"></script>
-        <script src="js/script.js"></script>
-    </body>
+    <!-- section-events -->
+    <section class="section-events">
+        <div class="container">
+            <div class="section-events__content">
+                <div class="col1">
+                    <h1 class="section-title">
+                        Календарь <br>
+                        событий
+                    </h1>
+                    <span class="subtitle">Приглашаем вас провести с нами время!</span>
+                    <button class="btn__vse">Посмотрите все <br>события <img src="img/icon/arrow.png" alt="arrow">
+                    </button>
+                </div>
+                <div class="col2">
+                    <img src="img/section_events/mramor.png" alt="mramor" class="mramor">
+                    <div class="section-events__slider owl-carousel">
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_events/goldfon.png" alt="goldfon" class="gold-fon">
+                            </div>
+                            <div class="col2">
+                                <p class="date"><span>18-19</span> <br>июля</p>
+                                <h1 class="cart__title">Образовательная <br>встреча</h1>
+                                <hr>
+                                <p class="cart__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci-</p>
+                                <button class="btn__podrobnee">Подробнее <img src="img/icon/arrow.png" alt="arrow"></button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_events/goldfon.png" alt="goldfon" class="gold-fon">
+                            </div>
+                            <div class="col2">
+                                <p class="date"><span>18-19</span> <br>июля</p>
+                                <h1 class="cart__title">Образовательная <br>встреча</h1>
+                                <hr>
+                                <p class="cart__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci-</p>
+                                <button class="btn__podrobnee">Подробнее <img src="img/icon/arrow.png" alt="arrow"></button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_events/goldfon.png" alt="goldfon" class="gold-fon">
+                            </div>
+                            <div class="col2">
+                                <p class="date"><span>18-19</span> <br>июля</p>
+                                <h1 class="cart__title">Образовательная <br>встреча</h1>
+                                <hr>
+                                <p class="cart__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci-</p>
+                                <button class="btn__podrobnee">Подробнее <img src="img/icon/arrow.png" alt="arrow"></button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_events/goldfon.png" alt="goldfon" class="gold-fon">
+                            </div>
+                            <div class="col2">
+                                <p class="date"><span>18-19</span> <br>июля</p>
+                                <h1 class="cart__title">Образовательная <br>встреча</h1>
+                                <hr>
+                                <p class="cart__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci-</p>
+                                <button class="btn__podrobnee">Подробнее <img src="img/icon/arrow.png" alt="arrow"></button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_events/goldfon.png" alt="goldfon" class="gold-fon">
+                            </div>
+                            <div class="col2">
+                                <p class="date"><span>18-19</span> <br>июля</p>
+                                <h1 class="cart__title">Образовательная <br>встреча</h1>
+                                <hr>
+                                <p class="cart__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci-</p>
+                                <button class="btn__podrobnee">Подробнее <img src="img/icon/arrow.png" alt="arrow"></button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_events/goldfon.png" alt="goldfon" class="gold-fon">
+                            </div>
+                            <div class="col2">
+                                <p class="date"><span>18-19</span> <br>июля</p>
+                                <h1 class="cart__title">Образовательная <br>встреча</h1>
+                                <hr>
+                                <p class="cart__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci-</p>
+                                <button class="btn__podrobnee">Подробнее <img src="img/icon/arrow.png" alt="arrow"></button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_events/goldfon.png" alt="goldfon" class="gold-fon">
+                            </div>
+                            <div class="col2">
+                                <p class="date"><span>18-19</span> <br>июля</p>
+                                <h1 class="cart__title">Образовательная <br>встреча</h1>
+                                <hr>
+                                <p class="cart__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci-</p>
+                                <button class="btn__podrobnee">Подробнее <img src="img/icon/arrow.png" alt="arrow"></button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_events/goldfon.png" alt="goldfon" class="gold-fon">
+                            </div>
+                            <div class="col2">
+                                <p class="date"><span>18-19</span> <br>июля</p>
+                                <h1 class="cart__title">Образовательная <br>встреча</h1>
+                                <hr>
+                                <p class="cart__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci-</p>
+                                <button class="btn__podrobnee">Подробнее <img src="img/icon/arrow.png" alt="arrow"></button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="col1">
+                                <img src="img/section_events/goldfon.png" alt="goldfon" class="gold-fon">
+                            </div>
+                            <div class="col2">
+                                <p class="date"><span>18-19</span> <br>июля</p>
+                                <h1 class="cart__title">Образовательная <br>встреча</h1>
+                                <hr>
+                                <p class="cart__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci-</p>
+                                <button class="btn__podrobnee">Подробнее <img src="img/icon/arrow.png" alt="arrow"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- section-pris -->
+    <section class="section-pris">
+        <img src="img/icon/Линии.png" alt="line" class="line">
+        <div class="container">
+            <div class="section-pris__content">
+                <div class="col1">
+                    <h1 class="section-pris__title">
+                        Получите подарок <br>
+                        от образовательного <br>
+                        проекта WOMEN2WOMEN
+                    </h1>
+                    <p class="section-pris__text">
+                        Мы хотим подарить вам бесплатный <br>
+                        видео-урок!
+                        <br>
+                        <br>
+                        Это будут полезные «выжимки» из всего <br>
+                        курса по теме юриспруденции, финансов, бизнес-планирования, психологии <br>
+                        и маркетинга!
+                    </p>
+                </div>
+                <div class="col2">
+                    <img src="img/section_pris/ui-img.png" alt="ui-img">
+                </div>
+                <form class="section-pris__contactform" id="contactform" action="#">
+                    <input type="text" name="name" id="name" class="name" placeholder="Имя, Фамилия">
+                    <input type="tel" name="phone" id="phone" class="phone" placeholder="Телефон">
+                    <input type="email" name="email" id="email" class="email" placeholder="E-mail">
+                    <input type="submit" value="Получить подарок">
+                </form>
+                <p class="uslovia">Нажимая на кнопку “Отправить заявку” Вы соглашаетесь с условиями передачи данных</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-partner -->
+    <section class="section-partner">
+        <div class="container">
+            <div class="section-partner__content">
+                <h1 class="section-partner__title">Партнеры проекта</h1>
+                <div class="row__img">
+                    <img src="img/section_partner/predprinemateli.png" alt="predprinemateli" width="157px" height="52px">
+                    <img src="img/section_partner/netologia.png" alt="netologia" width="204px" height="44px">
+                    <img src="img/section_partner/ekonom.png" alt="ekonom" width="163px" height="95px">
+                    <img src="img/section_partner/delovay.png" alt="delovay" width="175px" height="40px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-presoed -->
+    <section class="section-presoed">
+        <div class="temno"></div>
+        <div class="container">
+            <div class="section-presoed__content">
+                <h1 class="section-presoed__title">Присоеденяйтесь к нашему образовательному проекту – <br>
+                <span>обретите окружение единомышленниц!</span></h1>
+                <form action="#" class="section-presoed__contactform" id="contactform">
+                    <input type="text" name="name" id="name" class="name" placeholder="Имя, Фамилия">
+                    <input type="tel" name="phone" id="phone" class="phone" placeholder="Телефон">
+                    <input type="email" name="email" id="email" class="email" placeholder="E-mail">
+                    <input type="submit" value="Подписаться">
+                </form>
+                <p class="uslovia">Нажимая на кнопку “Отправить заявку” Вы соглашаетесь с условиями передачи данных</p>
+                <div class="section-presoed__contacts">
+                    <div class="section-presoed__contacts__whatsapp">
+                        <img src="img/section_prisoed/whatsapp.png" alt="whatsapp">
+                        <p>Вы можете написать <br>
+                        нам в whatsapp</p>
+                    </div>
+                    <div class="section-presoed__contacts__phone">
+                        <img src="img/section_prisoed/phone.png" alt="phone">
+                        <p>Или позвонить по номеру: <br>
+                        <a href="tel:+7 (968) 088-55-77">+7 (968) 088-55-77</a></p>
+                    </div>
+                    <div class="section-presoed__contacts__email">
+                        <img src="img/section_prisoed/email.png" alt="email">
+                        <p>По вопросам партнерства: <br>
+                        <a href="mailto:pr@women2women.ru">pr@women2women.ru</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__content__logo">
+                    <a href="index.html" class="logo"><img src="img/icon/logo.svg" alt="logo"></a>
+                    <p>
+                        <span>women2women</span><br>
+                        образовательный бизнес-проект<br>
+                        для женщин
+                    </p>
+                </div>
+                <div class="soc-btn">
+                    <a href="#" class="youtube"><img src="img/footer/youtube.png" alt="youtube"></a>
+                    <a href="#" class="facebook"><img src="img/footer/face.png" alt="face"></a>
+                    <a href="#" class="insta"><img src="img/footer/insta.png" alt="insta"></a>
+                </div>
+                <p class="zashita">© WOMEN2WOMEN 2019 <br>
+                Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
 </html>

@@ -1,0 +1,142 @@
+.section-face
+    height: 100vh
+    background-color: #1f2024
+    position: relative
+
+    &__title
+        color: #fefeff
+        font-size: 36px
+        font-weight: 400
+        +PT
+        margin-bottom: 40px
+
+    &__text
+        font-size: 16px
+        font-weight: 400
+        line-height: 20.91px
+        color: #ffffff
+        +PT
+
+        span
+            text-transform: uppercase
+
+    &__content
+        position: relative
+        height: 100%
+        width: 100%
+        display: flex
+
+        .col1
+            display: flex
+            flex-direction: column
+            width: auto
+            justify-content: center
+            width: 20%
+
+            .arrows
+                margin-top: 30px
+                width: auto
+                button
+                    background: transparent
+                    border-width: 0
+                    margin-right: 15px
+                    &:last-child
+                        margin-right: 0
+                    &:hover
+                        cursor: pointer
+
+        .col2
+            width: 80%
+            height: 100%
+            display: flex
+            align-items: center
+            padding-left: 50px
+
+            .slider
+                width: 100%
+                height: auto
+                float: left
+                overflow: hidden
+
+                .slide
+                    float: left
+                    height: auto
+                    margin-right: 40px
+                    padding: 50px 30px
+                    display: flex
+                    width: 650px
+                    padding-right: 0
+
+                    &:last-child
+                        margin-right: 0
+
+                    .col1
+                        position: relative
+                        height: 100%
+                        width: 50%
+
+                        .goldfon, .mramor
+                            position: absolute
+                            width: 100%
+
+                        .face
+                            position: relative
+                            z-index: 1
+                            width: 100%
+
+                        .goldfon
+                            top: -30px
+                            left: -30px
+
+                        .mramor
+                            bottom: -30px
+                            left: 30px
+
+                    .col2
+                        width: 50%
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: flex-start
+                        padding: 0px 0px 0 70px
+
+                        .slide__name
+                            color: $color-text
+                            font-size: 24px
+                            +PT
+                            font-weight: 400
+                            display: inline-block
+                            margin-bottom: 0px
+
+                        .slide__text
+                            color: #ffffff
+                            font-size: 13px
+                            line-height: 20px
+                            font-weight: 400
+                            +PT
+                            padding: 0
+                            margin-bottom: 60px
+
+                        .slide__number
+                            display: flex
+                            color: #aa8d37
+                            width: auto
+                            height: auto
+                            align-items: center
+                            +PT
+
+                            p.number
+                                color: #ffffff
+                                font-size: 24px
+                                +PT
+                            
+                            hr
+                                margin: 0 10px
+                                height: 2px
+                                width: 87px
+                                background-color: #aa8d37
+                                border-width: 0
+
+                            p.long
+                                font-size: 16px
+                                +PT

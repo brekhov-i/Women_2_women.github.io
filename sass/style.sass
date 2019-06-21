@@ -1,143 +1,106 @@
-@import 'fonts'
-@import 'grid'
+@import "fonts"
+
+$color-white: #ffffff
+$color-text: #aa8d37
+$color-title: #a89249
+$color-link: #1f2024
 
 body
     margin: 0
     padding: 0
 
-*
+*, *:after, *:before
     box-sizing: border-box
-    outline: none !important
+    text-decoration: none
+    outline: none
 
-.row
-    margin: 0 !important
+h1, h2, h3, h4, h5, h6, p, span, 
+    margin: 0
 
-p
-    margin: 0 
-
-.modal-window
-    display: none
-    position: absolute
+.container
     width: 100%
+    max-width: 1140px
     height: 100%
-    background: url(../image/modal-form.png) no-repeat center
-    background-size: cover
-    z-index: 10000
-    top: 0
-    left: 0
-
-    &-content
-        display: flex
-        position: relative
-        width: 100%
-        height: 100%
-        align-items: center
-
-        button.modal_close
-            position: absolute
-            top: 30px
-            right: 50px
-            color: #ffffff
-            opacity: 1
-            width: 50px
-            height: 50px
-            transition: 0.8s all
-            transform: rotate(225deg)
-            display: flex
-            background: transparent
-            justify-content: center
-            align-items: center
-            font-weight: 300
-            border-width: 0
-
-            span
-                transform: rotate(0deg)
-                line-height: 30px
-                margin-top: -8px
-
-            img
-                transform: rotate(-45deg)
-
-        .col1
-            display: flex
-            flex-direction: column
-            width: 50%
-            transform: translateY(-40px)
-
-            h1
-                color: #aa8d37
-                font-size: 40px
-                letter-spacing: 5px
-                +PT
-
-            h6
-                font-size: 18px
-                color: #aa8d37
-                +PT
-                width: 458px
-                margin-bottom: 20px
-                letter-spacing: 1px
-
-            p
-                color: #ffffff
-                font-size: 14px
-                +PT
-                width: 458px
-                line-height: 25px
-                letter-spacing: 1px
-
-        .col2
-            width: 50%
-            display: flex
-
-            .contactForm
-                display: flex
-                flex-direction: column
-                width: 100%
-                align-items: center
-
-                .field-block
-                    width: auto
-                    margin-bottom: 37px
-                    height: auto
-
-                    input
-                        width: 400px
-                        height: 30px
-                        border-width: 0
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.26)
-                        background-color: transparent
-                        color: #ffffff
-                        padding-bottom: 0
-                        outline: none
-                        +PT
-
-                        &::placeholder 
-                            color: #ffffff
-                            font-size: 16px
-                            +PT
-
-                button
-                    background: url(../image/modal-btn.png) no-repeat center
-                    background-size: cover
-                    background-color: transparent
-                    width: 267px
-                    height: 48px
-                    color: #ffffff
-                    font-size: 16px
-                    text-transform: uppercase
-                    +PT
-                    border-width: 0
+    margin-left: auto
+    margin-right: auto
 
 .line
+    position: absolute
+    top: 0
+    left: 0
     width: 100%
     height: 100%
+    z-index: 0
+
+.content
+    display: flex
+    height: 100%
+
+.temno
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,0.6)
     position: absolute
     top: 0
     left: 0
 
+.btn
+    background: transparent
+    border-width: 0
+    
 
-@import 'interface/header'
-@import 'interface/section-tab'
-@import 'interface/section-unic'
-@import 'interface/section-person'
+.btn-close
+    position: absolute
+    top: 30px
+    right: 50px
+    font-size: 50px
+    background: transparent
+    color: $color-white
+    border-width: 0
+    transition: 0.5s all
+    outline: none
+    &:hover
+        cursor: pointer
+        color: #aa8d37
+
+input[name="phone"]
+    color: #ffffff
+
+input[type="submit"]
+    &:hover
+        cursor: pointer
+
+.button_top
+    display: none
+    position: fixed
+    justify-content: center
+    align-items: center
+    height: 60px
+    width: 60px
+    background: #a07419
+    z-index: 9000
+    padding: 15px
+    bottom: 50px
+    right: 50px
+    border-radius: 100px
+
+    &:hover
+        cursor: pointer
+
+    img
+        width: 100%
+
+
+// дизайн сайта
+@import 'menu-toggle'
+@import 'popup-toggle'
+@import 'header'
+@import 'section-tabs'
+@import 'section-unic'
+@import 'section-face'
+@import 'section-progress'
+@import 'section-events'
+@import 'section-pris'
+@import 'section-partner'
+@import 'section-presoed'
+@import 'footer'

@@ -1,0 +1,130 @@
+$color-fon: #1f2024
+.section-presoed
+    height: 100vh
+    position: relative
+    background: url(../img/section_prisoed/fon.png) no-repeat center
+    background-size: cover
+
+    .temno
+        background-color: rgba($color-fon,0.9)
+
+    &__title
+        color: $color-white
+        font-size: 30px
+        +PT
+        line-height: 48px
+        font-weight: 400
+        margin-bottom: 100px
+
+        span
+            color: $color-text
+
+    &__contacts
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &__whatsapp
+            display: flex
+            align-items: center
+
+            img
+                width: 32px
+                height: 32px
+                margin-right: 15px
+
+            p
+                color: $color-white
+                line-height: 18px
+                +PT
+                font-size: 14px
+
+        &__phone
+            display: flex
+            align-items: center
+
+            img
+                width: 29px
+                height: 30px
+                margin-right: 15px
+
+            p
+                color: $color-white
+                line-height: 18px
+                +PT
+                font-size: 14px
+
+                a
+                    color: $color-white
+                    text-decoration: underline
+
+
+        &__email
+            display: flex
+            align-items: center
+            
+            img
+                width: 32px
+                height: 32px
+                margin-right: 15px
+
+            p
+                color: $color-white
+                line-height: 18px
+                +PT
+                font-size: 14px
+
+                a
+                    color: $color-white
+                    text-decoration: underline
+
+    &__content
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 100%
+
+        p.uslovia
+            position: relative
+            display: block
+            width: 100%
+            margin: 0
+            opacity: 0.45
+            color: $color-white
+            font-size: 12px
+            font-weight: 400
+            line-height: 27.13px
+            margin-bottom: 100px
+            +PT
+
+        form
+            position: relative
+            height: 60px
+            width: 100%
+            display: flex
+            justify-content: space-between
+
+            input
+                flex: 0 0 auto
+                height: 45px
+                width: 267px
+                background: transparent
+                border-width: 0
+                border-bottom: 2px solid rgba($color-white, 0.26)
+
+                &::placeholder
+                    color: $color-white
+                    +PT
+                    font-size: 14px
+                    letter-spacing: 0.6px
+                    line-height: 117.98px
+                    font-weight: 400
+
+            input[type="submit"]
+                background: url(../img/section_pris/btn.png) no-repeat center
+                background-size: 100%
+                border-width: 0
+                color: $color-white
+                font-size: 16px
+                text-transform: uppercase

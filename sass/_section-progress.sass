@@ -1,0 +1,146 @@
+.section-progress
+    height: 100vh
+    padding: 0
+    margin: 0
+
+    &__slider
+        height: 100%
+        width: 100%
+
+        .owl-nav
+            display: none
+
+        .owl-stage-outer, .owl-stage, .owl-item
+            display: flex
+            height: 100%
+
+        .owl-stage-outer
+            overflow: hidden
+
+        .slide
+            height: 100%
+            width: 100%
+
+            .temno
+                background-color: #1d1f23
+                opacity: 0.7
+
+
+            &__content
+                position: relative
+                display: flex
+                width: 100%
+                height: 100%
+
+                .col1
+                    width: 50%
+                    height: 100%
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    position: relative
+                    align-items: flex-end
+                    padding-right: 50px
+
+                    .slide__title
+                        color: #f9faff
+                        font-size: 48px
+                        line-height: 48px
+                        font-weight: 400
+                        +PT
+                    
+                    hr
+                        height: 2px
+                        width: 244px
+                        background-color: #aa8d37
+                        border-width: 0
+                        position: absolute
+                        margin: 0
+                        right: -80px
+                        top: 44%
+
+                    .arrows
+                        width: 100%
+                        display: flex
+                        justify-content: center
+                        padding-left: 120px
+                        margin-top: 30px
+
+                        button
+                            background: transparent
+                            border-width: 0
+                            margin-right: 20px
+                            &:last-child
+                                margin-right: 0
+
+                .col2
+                    width: 50%
+                    height: 100%
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    padding-left: 100px
+
+                    .slide__subtitle
+                        font-size: 37px
+                        color: #aa8d37
+                        font-weight: 400
+                        +PT
+                        transform: translateY(-20px)
+                        letter-spacing: 3.03px
+
+                        span
+                            font-size: 96px
+
+                    .slide__text
+                        color: #f9faff
+                        font-size: 24px
+                        +PT
+                        font-weight: 400
+                        line-height: 34px
+                        transform: translateY(-20px)
+
+                    .slide__number
+                        display: flex
+                        width: auto
+                        align-items: center
+
+                        p.number
+                            color: #ffffff
+                            font-size: 24px
+                            letter-spacing: 3.03px
+                            +PT
+
+                        hr
+                            height: 2px
+                            margin: 20px
+                            background-color: #aa8d37
+                            border-width: 0
+                            width: 87px
+
+                        p.long
+                            font-size: 18px
+                            color: #9e844b
+                            font-weight: 400
+                            letter-spacing: 2.03px
+                            +PT
+
+        .slide1
+            background: url(../img/section_progress/slide1.png) no-repeat center
+            background-size: cover
+            position: relative
+
+        .slide2
+            background: url(../img/section_progress/slide2.png) no-repeat center
+            background-size: cover
+            position: relative
+
+        .slide3
+            background: url(../img/section_progress/slide3.png) no-repeat center
+            background-size: cover
+            position: relative
+
+        .slide4
+            background: url(../img/section_progress/slide4.png) no-repeat center
+            background-size: cover
+            position: relative

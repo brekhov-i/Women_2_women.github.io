@@ -1,0 +1,85 @@
+.section-pris
+    height: auto
+    background-color: #1f2024
+    position: relative
+    padding: 150px 0
+
+    &__content
+        height: 100%
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        position: relative
+
+        .col1
+            width: 40%
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+        .col2
+            position: relative
+            width: 60%
+            display: flex
+            align-items: center
+            
+            img
+                width: 100%
+
+        p.uslovia
+            position: relative
+            display: block
+            width: 100%
+            margin: 0
+            opacity: 0.45
+            color: $color-white
+            font-size: 12px
+            font-weight: 400
+            line-height: 27.13px
+            +PT
+
+        form
+            margin-top: 150px
+            position: relative
+            height: 60px
+            width: 100%
+            display: flex
+            justify-content: space-between
+
+            input
+                flex: 0 0 auto
+                height: 45px
+                width: 267px
+                background: transparent
+                border-width: 0
+                border-bottom: 2px solid rgba($color-white, 0.26)
+
+                &::placeholder
+                    color: $color-white
+                    +PT
+                    font-size: 14px
+                    letter-spacing: 0.6px
+                    line-height: 117.98px
+                    font-weight: 400
+
+            input[type="submit"]
+                background: url(../img/section_pris/btn.png) no-repeat center
+                background-size: 100%
+                border-width: 0
+                color: $color-white
+                font-size: 16px
+                text-transform: uppercase
+
+    &__title
+        color: $color-text
+        font-size: 30px
+        font-weight: 400
+        line-height: 36px
+        +PT
+
+    &__text
+        color: $color-white
+        font-size: 18px
+        font-weight: 400
+        line-height: 30px
+        +PT
