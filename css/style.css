@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6, p, span { margin: 0; }
 
 input[name="phone"] { color: #ffffff; }
 
+input[name="email"], input[name="name"] { opacity: 1; color: #ffffff; }
+
+input[name="email"]:focus::-webkit-input-placeholder, input[name="name"]:focus::-webkit-input-placeholder { -webkit-transition: opacity 0.3s ease; transition: opacity 0.3s ease; opacity: 0; }
+
 input[type="submit"]:hover { cursor: pointer; }
 
 .button_top { display: none; position: fixed; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 60px; width: 60px; background: #a07419; z-index: 9000; padding: 15px; bottom: 50px; right: 50px; border-radius: 100px; }
